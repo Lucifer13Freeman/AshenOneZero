@@ -23,7 +23,7 @@ router.post('/register', async (ctx:any) =>
 
     const hash = await argon2.hash(password);
 
-    await new User({ name, surname, patronymic, email, password: hash }).save();
+    await new User({ surname, name, patronymic, email, password: hash }).save();
 
     ctx.status = 201;  // user created successfully
 });
@@ -44,8 +44,8 @@ router.post('/login', async (ctx:any) =>
         const payload = {
 
             id: user.id,
-            name: user.name,
             surname: user.surname, 
+            name: user.name,
             patronymic: user.patronymic,
             email: user.email
         };
