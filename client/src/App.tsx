@@ -44,17 +44,17 @@ function App() {
       <BrowserRouter>
         <React.Fragment>
           <Header />
-          <div className = 'container'>
-            <Route path = '/register' component = {Register}></Route>
-            <Route path = '/login' component = {Login}></Route>
-            <Route exact path = '/' component = {AllPosts}></Route>
-            <Route path = '/post/:id' component = {SinglePost}></Route>
-            <Route path = '/user/:id' component = {UserProfile}></Route>
-            <Switch>
-              <PrivateRoute path="/feed" component = {Feed} />
-            </Switch>
-            <Route path = '/404' component = {NotFound}></Route>
-          </div>
+            <div className = 'container'>
+              <Route path = '/register' component = {Register}></Route>
+              <Route path = '/login' component = {Login}></Route>
+              <Route exact path = '/' component = {AllPosts}></Route>
+              <Route path = '/post/:id' component = {SinglePost}></Route>
+              <Route path = '/user/:id' component = {UserProfile}></Route>
+              <Switch>
+                <PrivateRoute path="/feed" component = {Feed} />
+              </Switch>
+              <Route path = '/404' component = {NotFound}></Route>
+            </div>
           <Footer />
         </React.Fragment>
       </BrowserRouter>
