@@ -8,3 +8,6 @@ export const UPDATE_POST = 'UPDATE_POST';
 export const UPDATE_POSTS = 'UPDATE_POSTS';
 export const DELETE_POST = 'DELETE_POST';
 export const CLEAR_POSTS = 'CLEAR_POSTS';
+
+export const USER_LOADING = 'USER_LOADING';
+export const GET_USER = 'GET_USER';

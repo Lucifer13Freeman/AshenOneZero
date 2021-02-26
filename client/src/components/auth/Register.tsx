@@ -7,12 +7,6 @@ import { register } from '../../actions/auth';
 
 class Register extends React.Component<any, any>
 {
-    static propTypes: 
-    { 
-      register: PropTypes.Validator<(...args: any[]) => any>; 
-      auth: PropTypes.Validator<object>; 
-    };
-
     constructor(props: any)
     {
         super(props);
@@ -30,9 +24,9 @@ class Register extends React.Component<any, any>
         if (this.props.auth.is_authenticated) this.props.history.push('/');
     }
 
-    onChange = (e:any) => this.setState({ [e.target.name]: e.target.value }); 
+    on_change = (e:any) => this.setState({ [e.target.name]: e.target.value }); 
 
-    onSubmit = (e:any) => 
+    on_submit = (e:any) => 
     {
         e.preventDefault();
         this.props.register(this.state, this.props.history);
@@ -46,7 +40,7 @@ class Register extends React.Component<any, any>
                     <div className="card">
                       <article className="card-body">
                         <h4 className="card-title text-center mb-4 mt-1">Registration</h4>
-                        <form onSubmit={this.onSubmit}>
+                        <form onSubmit={this.on_submit}>
                           <div className="form-group">
                             <div className="input-group">
                               <div className="input-group-prepend">
@@ -60,7 +54,7 @@ class Register extends React.Component<any, any>
                                 type="text"
                                 name="surname"
                                 value={this.state.surname}
-                                onChange={this.onChange}
+                                onChange={this.on_change}
                                 pattern=".{3,20}"
                                 required
                               />
@@ -79,7 +73,7 @@ class Register extends React.Component<any, any>
                                 type="text"
                                 name="name"
                                 value={this.state.name}
-                                onChange={this.onChange}
+                                onChange={this.on_change}
                                 pattern=".{3,20}"
                                 required
                               />
@@ -98,7 +92,7 @@ class Register extends React.Component<any, any>
                                 type="text"
                                 name="patronymic"
                                 value={this.state.patronymic}
-                                onChange={this.onChange}
+                                onChange={this.on_change}
                                 pattern=".{3,20}"
                               />
                             </div>
@@ -116,7 +110,7 @@ class Register extends React.Component<any, any>
                                 type="email"
                                 name="email"
                                 value={this.state.email}
-                                onChange={this.onChange}
+                                onChange={this.on_change}
                                 pattern=".{5,30}"
                                 required
                               />
@@ -135,7 +129,7 @@ class Register extends React.Component<any, any>
                                 type="password"
                                 name="password"
                                 value={this.state.password}
-                                onChange={this.onChange}
+                                onChange={this.on_change}
                                 pattern=".{6,30}"
                               />
                             </div>
@@ -150,6 +144,12 @@ class Register extends React.Component<any, any>
                 </div>
               );
   }
+
+  static propTypes: 
+    { 
+      register: PropTypes.Validator<(...args: any[]) => any>; 
+      auth: PropTypes.Validator<object>; 
+    };
 };
 
 Register.propTypes = {

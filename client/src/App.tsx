@@ -10,10 +10,13 @@ import store from './store';
 import set_auth_token from './utilites/set_auth_token';
 
 import {set_current_user, logout} from './actions/auth';
+
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
+import AllPosts from './components/all-posts/AllPosts';
+import SinglePost from './components/single-post/SinglePost';
 import NotFound from './components/not-found/NotFound';
 
 
@@ -41,6 +44,8 @@ function App() {
           <div className = 'container'>
             <Route path = '/register' component = {Register}></Route>
             <Route path = '/login' component = {Login}></Route>
+            <Route exact path = '/' component = {AllPosts}></Route>
+            <Route path = '/post/:id' component = {SinglePost}></Route>
             <Route path = '/404' component = {NotFound}></Route>
           </div>
           <Footer />

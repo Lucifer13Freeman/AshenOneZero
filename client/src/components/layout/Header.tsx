@@ -1,20 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import { logout } from '../../actions/auth';
-import { isPropertyAccessExpression } from 'typescript';
 
 class Header extends React.Component<any, any>
 {
-    static propTypes: 
-    {
-        logout: PropTypes.Validator<(...args: any[]) => any>;
-        auth: PropTypes.Validator<object>;
-    }
-
-    onLogout = (e:any) => {
+    on_logout = (e:any) => {
         e.preventDefault();
         this.props.logout();
     }
@@ -37,7 +30,7 @@ class Header extends React.Component<any, any>
                     <a
                         className="dropdown-item"
                         href="#"
-                        onClick={this.onLogout}
+                        onClick={this.on_logout}
                         >Log Out
                     </a>
                 </div>
@@ -91,6 +84,12 @@ class Header extends React.Component<any, any>
             </nav>
 
         )
+    }
+
+    static propTypes: 
+    {
+        logout: PropTypes.Validator<(...args: any[]) => any>;
+        auth: PropTypes.Validator<object>;
     }
 }
 

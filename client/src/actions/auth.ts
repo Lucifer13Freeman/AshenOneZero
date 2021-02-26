@@ -21,7 +21,7 @@ export const login = (user_data:any) => (dispatch:any) =>
             localStorage.setItem('access_token', token);
 
             set_auth_token(token);
-            const decoded = jwtDecode(token);
+            const decoded:any = jwtDecode(token);
 
             dispatch(set_current_user(decoded));
         });
