@@ -6,8 +6,8 @@ import Pagination from 'react-js-pagination';
 import { UPDATE_POSTS } from '../../actions/types';
 import { get_all } from '../../actions/post';
 
-import Post from './post';
-import Loader from './loader';
+import Post from './post/Post';
+import Loader from './loader/Loader';
 
 const LIMIT = 10;
 

@@ -23,7 +23,7 @@ class Post extends React.Component<any, any>
         this.post_body_ref.current.innerHTML = this.props.post.body;
     }
 
-    on_delete = () => { this.props.remove(this.props.post._id); }
+    on_delete = () => this.props.remove(this.props.post._id);
 
     render() 
     {

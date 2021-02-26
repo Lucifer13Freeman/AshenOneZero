@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import { UPDATE_POST } from '../../actions/types';
 import { get_by_id as get_post_id } from '../../actions/post';
 
-import Loader from '../shared/loader';
-import Post from '../shared/post';
+import Loader from '../shared/loader/Loader';
+import Post from '../shared/post/Post';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
 
