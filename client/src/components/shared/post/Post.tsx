@@ -46,7 +46,8 @@ class Post extends React.Component<any, any>
                                     post.user.patronymic}
                                 </div>
                                 <div className="h7 text-muted">
-                                    <i className="fa fa-clock-o"></i> {new Date(post.created_date).toDateString()}
+                                    <i className="fa fa-clock-o"></i> 
+                                    {new Date(post.created_date).toDateString()}
                                 </div>
                             </div>
                         </div>

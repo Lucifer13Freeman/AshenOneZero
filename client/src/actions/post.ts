@@ -44,7 +44,7 @@ export const get_all = (params:any) => (dispatch:any) =>
         });
 }
 
-export const get_by_id = (id:any) => (dispatch:any) =>
+export const get_by_id = (id:any, history:any) => (dispatch:any) =>
 {
     dispatch(set_post_loading(true));
 
@@ -55,7 +55,11 @@ export const get_by_id = (id:any) => (dispatch:any) =>
             type: GET_POST,
             payload: res.data
         }))
-        .catch(() => dispatch(set_post_loading(false)));
+        .catch(() => 
+        {
+            dispatch(set_post_loading(false));
+            history.push('/404');
+        });
 }
 
 export const remove = (id:any) => (dispatch:any) =>

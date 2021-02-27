@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Loader.css';
 
+
 export default () => (
     <div id="fountainG" className="mt-4">
         <div id="fountainG_1" className="fountainG"></div>

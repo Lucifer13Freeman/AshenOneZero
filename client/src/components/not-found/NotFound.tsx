@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export default () =>
 (
     <div className = 'text-center mt-5'>

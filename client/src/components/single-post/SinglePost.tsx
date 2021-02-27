@@ -1,20 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import { UPDATE_POST } from '../../actions/types';
-import { get_by_id as get_post_id } from '../../actions/post';
+import { get_by_id as get_post_by_id } from '../../actions/post';
 
 import Loader from '../shared/loader/Loader';
 import Post from '../shared/post/Post';
 import Comment from './Comment';
 import CommentForm from './CommentForm';
 
-class SinglePost extends React.Component<any, any>
+
+const SinglePost = ({ get_post_by_id, match, post, auth, history }:any) =>
+{
+  useEffect(() => get_post_by_id(match.params.id, history), []);
+
+  return !post.is_loading && post.post !== null ? (
+    <div className="row mt-5">
+      <div className="col-md-6 mx-auto">
+        <Post post={post.post} TYPE={UPDATE_POST} />
+        <div className="col-md-12 mx-auto">
+          {auth.is_authenticated && <CommentForm post_id={post.post._id} />}
+          {post.post.comments.map((c:any) => (
+            <Comment comment={c} post_id={post.post._id} key={c._id} />
+          ))}
+        </div>
+      </div>
+    </div>
+  ) : <Loader />
+}
+
+/*class SinglePost extends React.Component<any, any>
 {
     componentDidMount()
     {
-        this.props.get_post_id(this.props.match.params.id);
+        this.props.get_post_by_id(this.props.match.params.id);
     }
 
     UNSAFE_componentWillReceiveProps(nextProps:any)
@@ -42,17 +62,16 @@ class SinglePost extends React.Component<any, any>
     }
 
     static propTypes: { 
-        get_post_id: PropTypes.Validator<(...args: any[]) => any>; 
-        post: PropTypes.Validator<object>; 
-        auth: PropTypes.Validator<object>; 
+      get_post_by_id: PropTypes.Validator<(...args: any[]) => any>; 
+      post: PropTypes.Validator<object>; 
+      auth: PropTypes.Validator<object>; 
     };
-    
-}
+}*/
 
 SinglePost.propTypes = {
-    get_post_id: PropTypes.func.isRequired,
-    post: PropTypes.object.isRequired,
-    auth: PropTypes.object.isRequired
+  get_post_by_id: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
 }
 
 const map_state_to_props = (state:any) => (
@@ -61,4 +80,4 @@ const map_state_to_props = (state:any) => (
     auth: state.auth
 });
 
-export default connect(map_state_to_props, { get_post_id })(SinglePost);
+export default connect(map_state_to_props, { get_post_by_id })(SinglePost);

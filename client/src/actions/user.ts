@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import { GET_USER, USER_LOADING } from './types';
 
-export const get_user_by_id = (id:any) => (dispatch:any) =>
+export const get_by_id = (id:any, history:any) => (dispatch:any) =>
 {
     dispatch(set_user_loading(true));
 
@@ -13,7 +13,11 @@ export const get_user_by_id = (id:any) => (dispatch:any) =>
             type: GET_USER,
             payload: res.data
         }))
-        .catch(() => dispatch(set_user_loading(false)));
+        .catch(() => 
+        {
+            dispatch(set_user_loading(false));
+            history.push('/404');
+        });
 }
 
 const set_user_loading = (is_loading:any) => (

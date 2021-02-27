@@ -5,7 +5,18 @@ import PropTypes from 'prop-types';
 import PostForm from '../shared/PostForm';
 import Posts from '../shared/Posts';
 
-class AllPosts extends React.Component<any, any>
+
+const AllPosts = ({ auth }:any) =>
+(
+    <div className="row mt-4">
+        <div className="col-md-6 mx-auto">
+            {auth.is_authenticated && <PostForm />}
+            <Posts query_params={{}} />
+        </div>
+    </div>
+);
+
+/*class AllPosts extends React.Component<any, any>
 {
     render() 
     {
@@ -22,7 +33,7 @@ class AllPosts extends React.Component<any, any>
     }
 
     static propTypes: { auth: PropTypes.Validator<object>; };
-}
+}*/
 
 AllPosts.propTypes = { auth: PropTypes.object.isRequired }
 
