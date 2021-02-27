@@ -16,50 +16,56 @@ const Header = ({ logout, auth: { is_authenticated, user }}:any) =>
 
     let links;
 
-    if (is_authenticated) links = (
+    if (is_authenticated) 
+    {
+        links = (
 
-        <li className="nav-item dropdown">
-            <a 
-                className="nav-link dropdown-toggle" 
-                href="#" 
-                id="navbarDropdown" 
-                role="button" 
-                data-toggle="dropdown" 
-                aria-haspopup="true" 
-                aria-expanded="false"
-            >
-                <i className="fa fa-user"></i>
-                Account
-            </a>
-            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to={'/user/' + user.id}>My Profile</Link>
-                <div className="dropdown-divider"></div>
-                <a
-                    className="dropdown-item"
-                    href="#"
-                    onClick={on_logout}
-                    >Log Out
+            <li className="nav-item dropdown">
+                <a 
+                    className="nav-link dropdown-toggle" 
+                    href="#" 
+                    id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                >
+                    <i className="fa fa-user"></i>
+                    Account
                 </a>
-            </div>
-        </li>
-    );
-    else links = (
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <Link className="dropdown-item" to={'/user/' + user.id}>My Profile</Link>
+                    <div className="dropdown-divider"></div>
+                    <a
+                        className="dropdown-item"
+                        href="#"
+                        onClick={on_logout}
+                        >Log Out
+                    </a>
+                </div>
+            </li>
+        );
+    }
+    else 
+    {
+        links = (
 
-        <React.Fragment>
-            <li className="nav-item">
-                <Link className="nav-link" to="/login">
-                    <i className="fa fa-sign-in"></i>
-                    Log In
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link className="nav-link" to="/register">
-                  <i className="fa fa-user-plus"></i>
-                  Register
-                </Link>
-            </li>
-        </React.Fragment>
-    );
+            <React.Fragment>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/login">
+                        <i className="fa fa-sign-in"></i>
+                        Log In
+                    </Link>
+                </li>
+                <li className="nav-item">
+                    <Link className="nav-link" to="/register">
+                    <i className="fa fa-user-plus"></i>
+                    Register
+                    </Link>
+                </li>
+            </React.Fragment>
+        );
+    }
 
     return(
 
@@ -85,12 +91,14 @@ const Header = ({ logout, auth: { is_authenticated, user }}:any) =>
                                 All Posts
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/feed">
-                                <i className="fa fa-rss"></i>
-                                Feed
-                            </Link>
-                        </li>
+                        {is_authenticated && (
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/feed">
+                                    <i className="fa fa-rss"></i>
+                                    Feed
+                                </Link>
+                            </li>
+                        )}
                     </ul>
                     <ul className="navbar-nav">
                         {links}

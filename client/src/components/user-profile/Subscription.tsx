@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import { create, get_all, remove } from '../../actions/subscription';
 
 
-/* Subscription = (
+/*const Subscription = (
 {
     create, get_all, remove,
     auth, subscription: { subscriptions, is_loading },
