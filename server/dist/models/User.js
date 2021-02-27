@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const private_paths = require('mongoose-private-paths');
 const user_schema = new Schema({
-    name: {
+    surname: {
         type: String,
         required: true
     },
-    surname: {
+    name: {
         type: String,
         required: true
     },

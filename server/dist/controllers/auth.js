@@ -21,7 +21,7 @@ router.post('/register', (ctx) => __awaiter(void 0, void 0, void 0, function* ()
     if (user)
         ctx.throw(400, 'Error: Email already exists!');
     const hash = yield argon2.hash(password);
-    yield new User({ name, surname, patronymic, email, password: hash }).save();
+    yield new User({ surname, name, patronymic, email, password: hash }).save();
     ctx.status = 201;
 }));
 router.post('/login', (ctx) => __awaiter(void 0, void 0, void 0, function* () {
@@ -33,8 +33,8 @@ router.post('/login', (ctx) => __awaiter(void 0, void 0, void 0, function* () {
     if (is_match) {
         const payload = {
             id: user.id,
-            name: user.name,
             surname: user.surname,
+            name: user.name,
             patronymic: user.patronymic,
             email: user.email
         };
