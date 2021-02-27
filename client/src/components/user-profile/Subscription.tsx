@@ -47,7 +47,8 @@ class Subscription extends React.Component<any, any>
         this.props.get_all({ profile: this.props.user_id });
     }
 
-    on_sub_click = (e:any) => {
+    on_sub_click = (e:any) => 
+    {
         e.preventDefault();
         const { subscription: { subscriptions }, auth, user_id } = this.props;
 
