@@ -47,59 +47,6 @@ const PostForm = ({ create }:any) =>
     );
 }
 
-/*class PostForm extends React.Component<any, any>
-{
-    constructor(props: any)
-    {
-        super(props);
-        this.state = { body: '' }
-    }
-
-    on_change_body = (body:any) => this.setState({ body });
-
-    on_submit = (e:any) =>
-    {
-        e.preventDefault();
-        this.props.create(this.state);
-        this.setState({ body: '' });
-    }
-    
-    render() {
-        return(
-            <div className="card mb-4">
-                <div className="card-body">
-                    <form onSubmit={this.on_submit}>
-                        <div className="form-group">
-                            <Quill
-                                placeholder="What's up?"
-                                theme="snow"
-                                modules={{
-                                    toolbar: [
-                                        ['bold', 'italic', 'underline', 'strike'],
-                                        ['link', 'image', 'video'],
-                                        ['clean']
-                                    ]
-                                }}
-                                value={this.state.body}
-                                onChange={this.on_change_body}
-                            />
-                        </div>
-                        <div className="btn-group float-right">
-                            <button type="submit" className="btn btn-dark">Share</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        );
-    }
-
-    static propTypes: { 
-        create: PropTypes.Validator<(...args: any[]) => any>; 
-        auth: PropTypes.Validator<object>; 
-    };
-    
-}*/
-
 PostForm.propTypes = {
     create: PropTypes.func.isRequired,
     auth: PropTypes.object.isRequired

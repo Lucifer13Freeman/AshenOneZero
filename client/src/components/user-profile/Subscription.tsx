@@ -1,4 +1,3 @@
-//import React, {useEffect } from 'react';
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -6,39 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 import { create, get_all, remove } from '../../actions/subscription';
 
-
-/*const Subscription = (
-{
-    create, get_all, remove,
-    auth, subscription: { subscriptions, is_loading },
-    history, user_id
-}:any) => 
-{
-    useEffect(() => get_all({ profile: user_id }), []);
-
-    const on_sub_click = (e:any) => 
-    {
-        e.preventDefault();
-
-        if (!auth.is_authenticated) history.push('/login');
-        else
-        {
-            const existed_sub = subscriptions.find((s:any) => s.subscriber === auth.user.id);
-
-            if (existed_sub) remove(existed_sub._id);
-            else create({ profile: user_id });
-        }
-    }
-    
-    return !is_loading && (
-        <button
-            className="btn btn-dark btn-block subscribe-btn"
-            onClick={on_sub_click}
-        >
-            Subscribe | <i className="fa fa-users"></i> {subscriptions.length}
-        </button>
-    );
-}*/
 
 class Subscription extends React.Component<any, any>
 {

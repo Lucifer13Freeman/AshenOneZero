@@ -30,44 +30,6 @@ const SinglePost = ({ get_post_by_id, match, post, auth, history }:any) =>
   ) : <Loader />
 }
 
-/*class SinglePost extends React.Component<any, any>
-{
-    componentDidMount()
-    {
-        this.props.get_post_by_id(this.props.match.params.id);
-    }
-
-    UNSAFE_componentWillReceiveProps(nextProps:any)
-    {
-        if (!nextProps.post.is_loading && nextProps.post.post === null) this.props.history.push('/404');
-    }
-
-    render()
-    {
-        const { auth, post } = this.props;
-
-        return !post.is_loading && post.post !== null ? (
-            <div className="row mt-5">
-              <div className="col-md-6 mx-auto">
-                <Post post={post.post} TYPE={UPDATE_POST} />
-                <div className="col-md-12 mx-auto">
-                  {auth.is_authenticated && <CommentForm post_id={post.post._id} />}
-                  {post.post.comments.map((c:any) => (
-                    <Comment comment={c} post_id={post.post._id} key={c._id} />
-                  ))}
-                </div>
-              </div>
-            </div>
-        ) : <Loader />
-    }
-
-    static propTypes: { 
-      get_post_by_id: PropTypes.Validator<(...args: any[]) => any>; 
-      post: PropTypes.Validator<object>; 
-      auth: PropTypes.Validator<object>; 
-    };
-}*/
-
 SinglePost.propTypes = {
   get_post_by_id: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired,
