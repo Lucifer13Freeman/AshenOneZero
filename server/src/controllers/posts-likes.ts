@@ -5,6 +5,7 @@ const passport = require('koa-passport');
 
 const Post = require('../models/Post');
 
+
 const router = new Router().prefix('/posts/:postID/likes');
 
 router.post('/', passport.authenticate('jwt', { session: false }), async (ctx:any) => 

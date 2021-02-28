@@ -5,6 +5,7 @@ const passport = require('koa-passport');
 
 const Subscription = require('../models/Subscription');
 
+
 const router = new Router().prefix('/subscriptions');
 
 router.post('/', passport.authenticate('jwt', { session: false }), async (ctx:any) => 

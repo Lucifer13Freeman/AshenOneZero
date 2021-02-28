@@ -2,11 +2,11 @@ export {};
 
 const Router = require('koa-router');
 const argon2 = require('argon2');
-//const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const User = require('../models/User');
 const config = require('../lib/config');
+
 
 const router = new Router().prefix('/auth');
 
@@ -18,14 +18,11 @@ router.post('/register', async (ctx:any) =>
 
     if (user) ctx.throw(400, 'Error: Email already exists!');
 
-    //const salt = await bcrypt.genSalt(10);
-    //const hash = await bcrypt.hash(password, salt);
-
     const hash = await argon2.hash(password);
 
     await new User({ surname, name, patronymic, email, password: hash }).save();
 
-    ctx.status = 201;  // user created successfully
+    ctx.status = 201;
 });
 
 router.post('/login', async (ctx:any) => 
@@ -34,8 +31,6 @@ router.post('/login', async (ctx:any) =>
     const user = await User.findOne({ email });
 
     if (!user) ctx.throw(400, 'Error: User with this email does not exists!');
-
-    //const is_match = await bcrypt.compare(password, user.password);
 
     const is_match = await argon2.verify(user.password, password);
 
