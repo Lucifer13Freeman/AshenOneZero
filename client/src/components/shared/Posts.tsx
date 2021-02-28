@@ -57,10 +57,10 @@ Posts.propTypes = {
     query_params: PropTypes.object.isRequired
 }
 
-const map_state_to_props = (state:any) => (
+const mapStateToProps = (state:any) => (
 { 
     post: state.post,
     auth: state.auth
 });
 
-export default connect(map_state_to_props, { get_all })(Posts);
+export default connect(mapStateToProps, { get_all })(Posts);

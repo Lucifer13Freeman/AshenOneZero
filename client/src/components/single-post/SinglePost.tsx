@@ -36,10 +36,10 @@ SinglePost.propTypes = {
   auth: PropTypes.object.isRequired
 }
 
-const map_state_to_props = (state:any) => (
+const mapStateToProps = (state:any) => (
 { 
     post: state.post,
     auth: state.auth
 });
 
-export default connect(map_state_to_props, { get_post_by_id })(SinglePost);
+export default connect(mapStateToProps, { get_post_by_id })(SinglePost);

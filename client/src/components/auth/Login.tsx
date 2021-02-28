@@ -17,8 +17,8 @@ const Login = ({ history, auth, login }:any) =>
 
   const on_submit = (e:any) => 
   {
-      e.preventDefault();
-      login({ email, password });
+    e.preventDefault();
+    login({ email, password });
   }
 
   return(
@@ -79,10 +79,10 @@ const Login = ({ history, auth, login }:any) =>
 }
 
 Login.propTypes = {
-    login: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
+  login: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
 }
 
-const map_state_to_props = (state:any) => ({ auth: state.auth });
+const mapStateToProps = (state:any) => ({ auth: state.auth });
 
-export default connect(map_state_to_props, { login })(Login);
+export default connect(mapStateToProps, { login })(Login);

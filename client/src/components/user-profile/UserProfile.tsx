@@ -61,10 +61,10 @@ UserProfile.propTypes = {
     auth: PropTypes.object.isRequired
 }
 
-const map_state_to_props = (state:any) => (
+const mapStateToProps = (state:any) => (
 { 
     user: state.user,
     auth: state.auth 
 });
 
-export default connect(map_state_to_props, { get_user_by_id })(UserProfile);
+export default connect(mapStateToProps, { get_user_by_id })(UserProfile);

@@ -34,10 +34,10 @@ Feed.propTypes = {
     auth: PropTypes.object.isRequired
 }
 
-const map_state_to_props = (state:any) => (
+const mapStateToProps = (state:any) => (
 { 
     subscription: state.subscription,
     auth: state.auth 
 });
 
-export default connect(map_state_to_props, { get_all_subscriptions })(Feed);
+export default connect(mapStateToProps, { get_all_subscriptions })(Feed);

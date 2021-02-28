@@ -10,7 +10,7 @@ import ProfileImage from '../shared/ProfileImage';
 
 const Comment = ({ comment, post_id, remove_comment, auth }:any) =>
 {
-    const on_delete = () => remove_comment(post_id ,comment._id); 
+    const on_delete = () => remove_comment(post_id, comment._id); 
 
     return(
         <div className="card mb-3">
@@ -77,6 +77,6 @@ Comment.propTypes = {
     post_id: PropTypes.string.isRequired
 }
 
-const map_state_to_props = (state:any) => ({ auth: state.auth });
+const mapStateToProps = (state:any) => ({ auth: state.auth });
 
-export default connect(map_state_to_props, { remove_comment })(Comment);
+export default connect(mapStateToProps, { remove_comment })(Comment);

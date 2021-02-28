@@ -20,8 +20,8 @@ const Register = ({ auth, register, history }:any) =>
 
   const on_submit = (e:any) => 
   {
-      e.preventDefault();
-      register({ surname, name, patronymic, email, password }, history);
+    e.preventDefault();
+    register({ surname, name, patronymic, email, password }, history);
   }
 
   return (
@@ -136,10 +136,10 @@ const Register = ({ auth, register, history }:any) =>
 }
 
 Register.propTypes = {
-    register: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
-};
+  register: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+}
 
-const map_state_to_props = (state:any) => ({ auth: state.auth });
+const mapStateToProps = (state:any) => ({ auth: state.auth });
 
-export default connect(map_state_to_props, { register })(Register);
+export default connect(mapStateToProps, { register })(Register);

@@ -46,6 +46,6 @@ CommentForm.propTypes = {
     post_id: PropTypes.string.isRequired
 }
 
-const map_state_to_props = (state:any) => ({ auth: state.auth });
+const mapStateToProps = (state:any) => ({ auth: state.auth });
 
-export default connect(map_state_to_props, { create_comment })(CommentForm);
+export default connect(mapStateToProps, { create_comment })(CommentForm);

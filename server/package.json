@@ -28,7 +28,6 @@
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.0",
     "argon2": "^0.27.1",
-    "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.13.1",

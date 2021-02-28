@@ -61,10 +61,10 @@ Subscription.propTypes = {
     user_id: PropTypes.string.isRequired
 }
 
-const map_state_to_props = (state:any) => (
+const mapStateToProps = (state:any) => (
 { 
     auth: state.auth,
     subscription: state.subscription
 });
 
-export default connect(map_state_to_props, { create, get_all, remove })(withRouter(Subscription));
+export default connect(mapStateToProps, { create, get_all, remove })(withRouter(Subscription));

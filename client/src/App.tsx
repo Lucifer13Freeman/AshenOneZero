@@ -6,7 +6,7 @@ import jwtDecode from 'jwt-decode';
 import logo from './logo.svg';
 import './App.css';
 
-import store from './store';
+import store from './store/store';
 import set_auth_token from './utilites/set_auth_token';
 
 import {set_current_user, logout} from './actions/auth';
@@ -44,16 +44,16 @@ function App() {
       <BrowserRouter>
         <React.Fragment>
           <Header />
-            <div className = 'container'>
-              <Route path = '/register' component = {Register}></Route>
-              <Route path = '/login' component = {Login}></Route>
-              <Route exact path = '/' component = {AllPosts}></Route>
-              <Route path = '/post/:id' component = {SinglePost}></Route>
-              <Route path = '/user/:id' component = {UserProfile}></Route>
+            <div className="container">
+              <Route path="/register" component = {Register}></Route>
+              <Route path="/login" component = {Login}></Route>
+              <Route exact path="/" component = {AllPosts}></Route>
+              <Route path="/post/:id" component = {SinglePost}></Route>
+              <Route path="/user/:id" component = {UserProfile}></Route>
               <Switch>
                 <PrivateRoute path="/feed" component = {Feed} />
               </Switch>
-              <Route path = '/404' component = {NotFound}></Route>
+              <Route path="/404" component = {NotFound}></Route>
             </div>
           <Footer />
         </React.Fragment>
