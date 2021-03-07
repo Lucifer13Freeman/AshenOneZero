@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lucifer13Freeman/AshenOne-mongodb.git"
+    "url": "git+https://github.com/Lucifer13Freeman/AshenOne.git"
   },
   "author": "Lipinskas Dmitry <Dmitri98LD@gmail.com> (Lucifer13Freeman)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Lucifer13Freeman/AshenOne-mongodb/issues"
+    "url": "https://github.com/Lucifer13Freeman/AshenOne/issues"
   },
-  "homepage": "https://github.com/Lucifer13Freeman/AshenOne-mongodb#readme",
+  "homepage": "https://github.com/Lucifer13Freeman/AshenOne#readme",
   "devDependencies": {
     "@types/node": "^14.14.27",
     "nodemon": "^2.0.7",
