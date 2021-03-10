@@ -39,7 +39,7 @@ const PostForm = ({ create }:any) =>
                         />
                     </div>
                     <div className="btn-group float-right">
-                        <button type="submit" className="btn btn-dark">Share</button>
+                        <button type="submit" className="btn btn-$primary_btn_color">Share</button>
                     </div>
                 </form>
             </div>

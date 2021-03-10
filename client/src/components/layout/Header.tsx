@@ -69,7 +69,7 @@ const Header = ({ logout, auth: { is_authenticated, user }}:any) =>
 
     return(
 
-        <nav className="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar fixed-top navbar-icon-top navbar-expand-lg navbar-dark bg-$primary_color">
             <div className="container">
                 <Link className="navbar-brand" to="/">AshenOne</Link>
                 <button 

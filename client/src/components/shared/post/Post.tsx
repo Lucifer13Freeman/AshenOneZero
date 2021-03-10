@@ -15,6 +15,7 @@ const Post = ({ post, remove, auth, TYPE }:any) =>
     const on_delete = () => remove(post._id);
 
     return (
+        
         <div className="card mb-4">
             <div className="card-header">
                 <div className="d-flex justify-content-between align-items-center">

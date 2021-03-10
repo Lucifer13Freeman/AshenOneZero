@@ -3,17 +3,18 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import jwtDecode from 'jwt-decode';
 
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
 
 import store from './store/store';
 import set_auth_token from './utilites/set_auth_token';
 
-import {set_current_user, logout} from './actions/auth';
+import { set_current_user, logout } from './actions/auth';
 
 import PrivateRoute from './components/shared/PrivateRoute';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import CloudEffect from './components/effects/CloudEffect';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import AllPosts from './components/all-posts/AllPosts';
@@ -40,20 +41,21 @@ if (localStorage.access_token)
 
 function App() {
   return (
-    <Provider store = {store}>
+    <Provider store={store}>
       <BrowserRouter>
         <React.Fragment>
           <Header />
+          <CloudEffect />
             <div className="container">
-              <Route path="/register" component = {Register}></Route>
-              <Route path="/login" component = {Login}></Route>
-              <Route exact path="/" component = {AllPosts}></Route>
-              <Route path="/post/:id" component = {SinglePost}></Route>
-              <Route path="/user/:id" component = {UserProfile}></Route>
+              <Route path="/register" component={Register}></Route>
+              <Route path="/login" component={Login}></Route>
+              <Route exact path="/" component={AllPosts}></Route>
+              <Route path="/post/:id" component={SinglePost}></Route>
+              <Route path="/user/:id" component={UserProfile}></Route>
               <Switch>
-                <PrivateRoute path="/feed" component = {Feed} />
+                <PrivateRoute path="/feed" component={Feed} />
               </Switch>
-              <Route path="/404" component = {NotFound}></Route>
+              <Route path="/404" component={NotFound}></Route>
             </div>
           <Footer />
         </React.Fragment>

@@ -13,6 +13,7 @@ const Comment = ({ comment, post_id, remove_comment, auth }:any) =>
     const on_delete = () => remove_comment(post_id, comment._id); 
 
     return(
+        
         <div className="card mb-3">
             <div className="card-body">
                 <div className="row">

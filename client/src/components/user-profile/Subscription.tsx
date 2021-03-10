@@ -1,10 +1,41 @@
-import React from 'react';
+import React/*, { useEffect }*/ from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { create, get_all, remove } from '../../actions/subscription';
 
+
+/*const Subscription = ({ create, get_all, remove, 
+                        subscription: { subscriptions, is_loading }, 
+                        auth, user_id, history }:any) =>
+{
+    useEffect(() => get_all({ profile: user_id }), []);
+
+    const on_sub_click = (e:any) => 
+    {
+        e.preventDefault();
+
+        if (!auth.is_authenticated) history.push('/login');
+        else
+        {
+            const existed_sub = subscriptions.find((s:any) => s.subscriber === auth.user.id);
+
+            if (existed_sub) remove(existed_sub._id);
+            else create({ profile: user_id });
+        }
+    }
+    
+    return !is_loading && (
+
+        <button
+            className="btn btn-$primary_btn_color btn-block subscribe-btn"
+            onClick={on_sub_click}
+        >
+            Subscribe | <i className="fa fa-users"></i> {subscriptions.length}
+        </button>
+    );
+}*/
 
 class Subscription extends React.Component<any, any>
 {
@@ -33,12 +64,13 @@ class Subscription extends React.Component<any, any>
         const { subscriptions, is_loading } = this.props.subscription;
 
         return !is_loading && (
-                <button
-                    className="btn btn-dark btn-block subscribe-btn"
-                    onClick={this.on_sub_click}
-                >
-                    Subscribe | <i className="fa fa-users"></i> {subscriptions.length}
-                </button>
+
+            <button
+                className="btn btn-$primary_btn_color btn-block subscribe-btn"
+                onClick={this.on_sub_click}
+            >
+                Subscribe | <i className="fa fa-users"></i> {subscriptions.length}
+            </button>
         );
     }
 

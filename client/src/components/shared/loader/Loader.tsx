@@ -1,9 +1,10 @@
 import React from 'react';
 
-import './Loader.css';
+import './Loader.scss';
 
 
 export default () => (
+    
     <div id="fountainG" className="mt-4">
         <div id="fountainG_1" className="fountainG"></div>
         <div id="fountainG_2" className="fountainG"></div>

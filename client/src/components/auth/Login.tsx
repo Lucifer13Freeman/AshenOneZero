@@ -68,7 +68,7 @@ const Login = ({ history, auth, login }:any) =>
                 </div>
               </div>
               <div className="form-group">
-                <button type="submit" className="btn btn-dark btn-block">Login</button>
+                <button type="submit" className="btn btn-$primary_btn_color btn-block">Login</button>
               </div>
             </form>
           </article>

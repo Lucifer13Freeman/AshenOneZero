@@ -20,6 +20,7 @@
     "jquery": "^3.5.1",
     "js-md5": "^0.7.3",
     "jwt-decode": "^3.1.2",
+    "node-sass": "^5.0.0",
     "popper.js": "^1.16.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

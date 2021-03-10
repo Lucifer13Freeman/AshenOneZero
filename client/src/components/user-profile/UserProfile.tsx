@@ -15,6 +15,7 @@ const UserProfile = ({ get_user_by_id, match, history, auth, user: { user, is_lo
     useEffect(() => get_user_by_id(match.params.id, history), []);
 
     return !is_loading && user !== null ? (
+        
         <React.Fragment>
             <div className="row mt-5">
                 <div className="col-md-6 mx-auto">

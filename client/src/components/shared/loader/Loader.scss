@@ -1,11 +1,13 @@
-#fountainG {
+#fountainG 
+{
   position: relative;
   width: 234px;
   height: 28px;
   margin: auto;
 }
 
-.fountainG {
+.fountainG 
+{
   position: absolute;
   top: 0;
   background-color: rgb(0, 0, 0);
@@ -43,7 +45,8 @@
   -moz-border-radius: 19px;
 }
 
-#fountainG_1 {
+#fountainG_1 
+{
   left: 0;
   animation-delay: 0.6s;
   -o-animation-delay: 0.6s;
@@ -52,7 +55,8 @@
   -moz-animation-delay: 0.6s;
 }
 
-#fountainG_2 {
+#fountainG_2 
+{
   left: 29px;
   animation-delay: 0.75s;
   -o-animation-delay: 0.75s;
@@ -61,7 +65,8 @@
   -moz-animation-delay: 0.75s;
 }
 
-#fountainG_3 {
+#fountainG_3 
+{
   left: 58px;
   animation-delay: 0.9s;
   -o-animation-delay: 0.9s;
@@ -70,7 +75,8 @@
   -moz-animation-delay: 0.9s;
 }
 
-#fountainG_4 {
+#fountainG_4
+{
   left: 88px;
   animation-delay: 1.05s;
   -o-animation-delay: 1.05s;
@@ -79,7 +85,8 @@
   -moz-animation-delay: 1.05s;
 }
 
-#fountainG_5 {
+#fountainG_5 
+{
   left: 117px;
   animation-delay: 1.2s;
   -o-animation-delay: 1.2s;
@@ -88,7 +95,8 @@
   -moz-animation-delay: 1.2s;
 }
 
-#fountainG_6 {
+#fountainG_6 
+{
   left: 146px;
   animation-delay: 1.35s;
   -o-animation-delay: 1.35s;
@@ -97,7 +105,8 @@
   -moz-animation-delay: 1.35s;
 }
 
-#fountainG_7 {
+#fountainG_7 
+{
   left: 175px;
   animation-delay: 1.5s;
   -o-animation-delay: 1.5s;
@@ -106,7 +115,8 @@
   -moz-animation-delay: 1.5s;
 }
 
-#fountainG_8 {
+#fountainG_8 
+{
   left: 205px;
   animation-delay: 1.64s;
   -o-animation-delay: 1.64s;
@@ -116,62 +126,76 @@
 }
 
 
-
-@keyframes bounce_fountainG {
-  0% {
+@keyframes bounce_fountainG 
+{
+  0% 
+  {
     transform: scale(1);
     background-color: rgb(0, 0, 0);
   }
 
-  100% {
+  100% 
+  {
     transform: scale(.3);
     background-color: rgb(255, 255, 255);
   }
 }
 
-@-o-keyframes bounce_fountainG {
-  0% {
+@-o-keyframes bounce_fountainG 
+{
+  0% 
+  {
     -o-transform: scale(1);
     background-color: rgb(0, 0, 0);
   }
 
-  100% {
+  100% 
+  {
     -o-transform: scale(.3);
     background-color: rgb(255, 255, 255);
   }
 }
 
-@-ms-keyframes bounce_fountainG {
-  0% {
+@-ms-keyframes bounce_fountainG 
+{
+  0% 
+  {
     -ms-transform: scale(1);
     background-color: rgb(0, 0, 0);
   }
 
-  100% {
+  100% 
+  {
     -ms-transform: scale(.3);
     background-color: rgb(255, 255, 255);
   }
 }
 
-@-webkit-keyframes bounce_fountainG {
-  0% {
+@-webkit-keyframes bounce_fountainG 
+{
+  0% 
+  {
     -webkit-transform: scale(1);
     background-color: rgb(0, 0, 0);
   }
 
-  100% {
+  100% 
+  {
     -webkit-transform: scale(.3);
     background-color: rgb(255, 255, 255);
   }
 }
 
-@-moz-keyframes bounce_fountainG {
-  0% {
+@-moz-keyframes bounce_fountainG 
+{
+  0% 
+  {
     -moz-transform: scale(1);
     background-color: rgb(0, 0, 0);
   }
 
-  100% {
+  100% 
+  {
     -moz-transform: scale(.3);
     background-color: rgb(255, 255, 255);
   }

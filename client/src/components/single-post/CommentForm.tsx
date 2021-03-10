@@ -19,6 +19,7 @@ const CommentForm = ({ post_id, create_comment }:any) =>
     }
 
     return(
+        
         <div className="card mb-4">
             <div className="card-body">
                 <form onSubmit={on_submit}>
@@ -32,7 +33,7 @@ const CommentForm = ({ post_id, create_comment }:any) =>
                         />
                     </div>
                     <div className="btn-group">
-                        <button type="submit" className="btn btn-dark">Comment</button>
+                        <button type="submit" className="btn btn-$primary_btn_color">Comment</button>
                     </div>
                 </form>
             </div>

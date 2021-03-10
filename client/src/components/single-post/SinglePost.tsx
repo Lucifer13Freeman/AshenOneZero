@@ -16,6 +16,7 @@ const SinglePost = ({ get_post_by_id, match, post, auth, history }:any) =>
   useEffect(() => get_post_by_id(match.params.id, history), []);
 
   return !post.is_loading && post.post !== null ? (
+    
     <div className="row mt-5">
       <div className="col-md-6 mx-auto">
         <Post post={post.post} TYPE={UPDATE_POST} />

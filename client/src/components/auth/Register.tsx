@@ -25,6 +25,7 @@ const Register = ({ auth, register, history }:any) =>
   }
 
   return (
+    
     <div className="row mt-4">
       <div className="col-4 mx-auto">
         <div className="card">
@@ -125,7 +126,7 @@ const Register = ({ auth, register, history }:any) =>
                 </div>
               </div>
               <div className="form-group">
-                <button type="submit" className="btn btn-dark btn-block">Register</button>
+                <button type="submit" className="btn btn-$primary_btn_color btn-block">Register</button>
               </div>
             </form>
           </article>

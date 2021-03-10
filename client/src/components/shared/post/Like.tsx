@@ -21,6 +21,7 @@ const Like = ({ auth, post_id, likes, TYPE, remove_like, create_like }:any) =>
     }
 
     return (
+        
         <a
             href="#" role="button"
             className="card-link" onClick={on_like_click}
