@@ -1,5 +1,7 @@
 # AshenOne Project: My Little Social Network
 
+You need to create MongoDB claster and create .env file in server folder with MongoDB URI and other constants
+
 Comands for the terminal opened inside project's folder:
 
 npm i - to install all dependencies
