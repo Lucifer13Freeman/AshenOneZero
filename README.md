@@ -1,4 +1,12 @@
-# AshenOne Project: My Little Social Network
+# AshenOne Project 
+
+My little social network fullstack project
+
+Backend: Node.js, koa, MongoDB, mongoose (ORM для MongoDB)
+
+Frontend: React, Bootstrap, SCSS, Redux, Thunk, axios
+
+# Instruction and steps:
 
 You need to create MongoDB claster and create .env file in server folder with MongoDB URI and other constants
 
