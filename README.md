@@ -2,7 +2,7 @@
 
 My little social network fullstack project
 
-Backend: Node.js, koa, MongoDB, mongoose (ORM для MongoDB)
+Backend: Node.js, koa, MongoDB, mongoose (ORM for MongoDB)
 
 Frontend: React, Bootstrap, SCSS, Redux, Thunk, axios
 
@@ -16,13 +16,13 @@ npm i - to install all dependencies
 
 cd server - open server folder in terminal
 
-npm i - to install all dependencies
+npm i - to install all dependencies for server
 
 cd .. - return to previous folder
 
 cd client - open client folder in terminal
 
-npm i - to install all dependencies
+npm i - to install all dependencies for client
 
 cd .. - return to previous folder
 
