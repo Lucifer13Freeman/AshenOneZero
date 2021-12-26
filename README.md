@@ -1,4 +1,4 @@
-# AshenOne Project 
+# AshenOne Zero Project 
 
 My little social network fullstack project
 
